@@ -231,5 +231,113 @@
       </script>
     </header>
     <!-- header end -->
+
+    <!-- Showcase start -->
+    <section class="mt-[120px]">
+      <div class="max-w-[1320px] w-[95%] mx-auto relative">
+        <div
+          class="relative overflow-hidden rounded-xl h-[350px] md:h-[420px] swiper"
+        >
+          <div class="swiper-wrapper h-full">
+            <div class="swiper-slide h-full">
+              <img
+                src="./img/slide1.png"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+            <div class="swiper-slide h-full">
+              <img
+                src="./img/Hasan_aka.jpg"
+                class="w-screen h-screen object-cover object-center"
+              />
+            </div>
+            <div class="swiper-slide h-full">
+              <img
+                src="./img/Davron_aka.jpg"
+                class="w-screen h-screen object-cover object-center"
+              />
+            </div>
+          </div>
+          <!-- Swiper navigation -->
+          <button
+            id="prevBtn"
+            class="swiper-button-prev absolute left-3 top-1/2 -translate-y-1/2 z-10"
+          ></button>
+          <button
+            id="nextBtn"
+            class="swiper-button-next absolute right-3 top-1/2 -translate-y-1/2 z-10"
+          ></button>
+        </div>
+
+        <div
+          class="max-w-[1320px] w-[95%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 mt-6"
+        >
+          <div
+            class="bg-gray-100 rounded-xl p-4 hover:shadow-md transition cursor-pointer"
+          >
+            <h3 class="text-center font-bold text-gray-800 mb-2">
+              Добро пожаловать!
+            </h3>
+            <p class="text-center text-gray-600 mb-3">
+              Войдите, чтобы оставлять отзывы <br />
+              и пользоваться другими <br />
+              функциями авторизованных <br />
+              пользователей.
+            </p>
+            <button
+              class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 block mx-auto"
+            >
+              Войти в личный кабинет
+            </button>
+          </div>
+
+          <div
+            class="bg-[#e8eef6] rounded-xl p-4 flex flex-col items-center justify-center hover:shadow-md transition cursor-pointer"
+          >
+            <span class="text-gray-700 font-semibold text-lg"
+              >Покупать как юрлицо</span
+            >
+            <i class="fa-solid fa-briefcase text-3xl text-gray-600 mt-3"></i>
+          </div>
+
+          <div
+            class="bg-[#e7f4ff] rounded-xl p-4 flex flex-col items-center justify-center hover:shadow-md transition cursor-pointer"
+          >
+            <img src="./img/doczon-logo.73cc8cda.svg fill.svg" class="w-20 mb-3" />
+            <p class="text-center text-gray-700 text-sm font-medium">
+              Электронный <br> документооборот
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-4 flex flex-col items-center justify-center text-white hover:shadow-lg transition cursor-pointer"
+          >
+            <img
+              src="./img/foodee.svg"
+              alt="Foodee"
+              class="w-16 h-auto mb-2"
+            />
+            <p class="text-sm text-center">
+              Онлайн меню для <br /> ресторанов и <br> гостиниц
+            </p>
+          </div>
+        </div>
+
+        <script>
+          const swiper = new Swiper(".swiper", {
+            loop: true,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+            },
+            navigation: {
+              nextEl: "#nextBtn",
+              prevEl: "#prevBtn",
+            },
+          });
+        </script>
+      </div>
+    </section>
+    <!-- showcase end -->
   </body>
 </html>
