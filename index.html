@@ -1,11 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zon.uz</title>
-</head>
-<body>
-    
-</body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/Vector.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="font-['Roboto']">
+    <!-- header start -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white border-b border-gray-100 shadow-sm z-50"
+    >
+      <div class="max-w-[1320px] w-[95%] mx-auto px-4">
+        <!-- TOP BAR -->
+        <div
+          class="hidden md:flex items-center justify-between py-2 text-xs text-gray-400"
+        >
+          <div class="flex items-center gap-6">
+            <div
+              class="flex items-center gap-2 cursor-pointer hover:text-blue-500 transition"
+            >
+              <i class="fa-solid fa-location-dot text-gray-300"></i>
+              <span>Город</span>
+              <a href="./city.html" class="text-blue-500 hover:underline ml-1"
+                >Ташкент</a
+              >
+            </div>
+
+            <a
+              href="https://zon.uz"
+              class="flex items-center gap-1 hover:text-blue-500 transition"
+            >
+              <img src="./img/sell-icon.svg" alt="" class="w-4 h-4" />
+              Продавайте на Zon.uz
+            </a>
+
+            <a
+              href="https://www.b2bmarket.uz"
+              class="flex items-center gap-1 hover:text-blue-500 transition"
+            >
+              <img src="./img/buy-icon.svg" alt="" class="w-4 h-4" />
+              Покупать как юрлицо
+            </a>
+
+            <a
+              href="./help.html"
+              class="flex items-center gap-1 hover:text-blue-500 transition"
+            >
+              Помощь <i class="fa-solid fa-chevron-down text-[10px]"></i>
+            </a>
+
+            <a
+              href="./contacts.html"
+              class="flex items-center gap-1 hover:text-blue-500 transition"
+            >
+              <i class="fa-solid fa-phone"></i>
+              Контакты
+            </a>
+          </div>
+
+          <a
+            href="tel:+998785553500"
+            class="cursor-pointer hover:text-blue-500 transition"
+          >
+            <span class="text-black font-semibold flex items-center gap-1">
+              <i class="fa-solid fa-phone mr-1"></i>+998-78 555-35-00
+            </span>
+          </a>
+        </div>
+
+        <!-- MAIN HEADER -->
+        <div class="flex items-center justify-between py-3">
+          <!-- Logo -->
+          <a href="./index.html" class="flex items-center cursor-pointer">
+            <img src="./img/logo.svg" alt="Zon.uz" class="h-9 w-auto" />
+          </a>
+
+          <!-- Catalog -->
+          <button
+            class="hidden md:flex items-center justify-center gap-2 border border-[#011c47] rounded-md w-[140px] h-[42px] text-[#011c47] font-bold text-[16px] cursor-pointer hover:bg-gray-100 transition"
+          >
+            <img src="./img/catalog-icon.svg" alt="" class="w-5 h-5" />
+            Каталог
+          </button>
+
+          <!-- Search -->
+          <form class="hidden md:flex items-center flex-1 mx-6 max-w-[640px]">
+            <input
+              type="text"
+              placeholder="Найти товары"
+              class="border border-[#6682a9] rounded-l-md w-full h-[40px] px-4 font-bold text-[15px] text-[#c2cddd] focus:outline-none"
+            />
+            <button
+              type="submit"
+              class="border border-[#6682a9] border-l-0 rounded-r-md w-[48px] h-[40px] flex items-center justify-center text-[#6682a9] cursor-pointer hover:text-blue-500"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+          <!-- Right icons -->
+          <div class="hidden md:flex items-center gap-5">
+            <a href="./cart.html" class="cursor-pointer hover:text-blue-500">
+              <i class="fa-solid fa-cart-shopping text-xl text-gray-400"></i>
+            </a>
+
+            <a
+              href="./language.html"
+              class="flex items-center gap-2 hover:text-blue-500"
+            >
+              <img src="./img/globe.svg" alt="Globe" class="w-5 h-5" />
+              <span class="text-sm font-medium">RU</span>
+            </a>
+
+            <a href="./faq.html" class="cursor-pointer hover:text-blue-500">
+              <i class="fa-solid fa-circle-question text-xl text-gray-400"></i>
+            </a>
+
+            <a
+              href="./settings.html"
+              class="cursor-pointer hover:text-blue-500"
+            >
+              <i
+                class="fa-solid fa-grip-dots-vertical text-xl text-gray-400"
+              ></i>
+            </a>
+
+            <a href="./login.html" class="ml-2">
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md font-semibold cursor-pointer transition"
+              >
+                Войти
+              </button>
+            </a>
+          </div>
+
+          <!-- Hamburger -->
+          <button
+            id="menu-btn"
+            class="md:hidden text-gray-700 text-2xl focus:outline-none"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden flex-col gap-4 bg-white border-t border-gray-100 p-4 animate-slideDown"
+        >
+          <a href="./catalog.html" class="hover:text-blue-500 font-medium"
+            >Каталог</a
+          >
+
+          <!-- Search (mobile) -->
+          <form class="flex items-center w-full">
+            <input
+              type="text"
+              placeholder="Найти товары"
+              class="border border-gray-300 rounded-l-md w-full h-[38px] px-3 text-sm focus:outline-none"
+            />
+            <button
+              type="submit"
+              class="border border-gray-300 border-l-0 rounded-r-md w-[40px] h-[38px] flex items-center justify-center text-gray-500 hover:text-blue-500"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+          <a href="./help.html" class="hover:text-blue-500 font-medium"
+            >Помощь</a
+          >
+          <a href="./contacts.html" class="hover:text-blue-500 font-medium"
+            >Контакты</a
+          >
+          <a href="./cart.html" class="hover:text-blue-500 font-medium"
+            >Корзина</a
+          >
+
+          <div class="flex items-center gap-3 mt-2">
+            <a
+              href="./language.html"
+              class="flex items-center gap-2 hover:text-blue-500"
+            >
+              <img src="./img/globe.svg" alt="Globe" class="w-5 h-5" />
+              <span class="text-sm font-medium">RU</span>
+            </a>
+            <a href="./faq.html" class="hover:text-blue-500"
+              ><i class="fa-solid fa-circle-question"></i
+            ></a>
+            <a href="./settings.html" class="hover:text-blue-500"
+              ><i class="fa-solid fa-grip-dots-vertical"></i
+            ></a>
+          </div>
+
+          <a href="tel:+998785553500" class="font-semibold text-blue-600"
+            >+998 78 555 35 00</a
+          >
+
+          <a href="./login.html" class="hover:text-blue-500 font-medium"
+            >Войти</a
+          >
+        </div>
+      </div>
+
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          menuBtn.innerHTML = mobileMenu.classList.contains("hidden")
+            ? '<i class="fa-solid fa-bars"></i>'
+            : '<i class="fa-solid fa-xmark"></i>';
+        });
+      </script>
+    </header>
+    <!-- header end -->
+  </body>
 </html>
