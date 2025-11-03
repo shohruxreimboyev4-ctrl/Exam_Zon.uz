@@ -110,3 +110,5 @@ document.addEventListener("click", (e) => {
     window.location.href = "basket/cart.html";
   }
 });
+
+
