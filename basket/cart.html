@@ -14,26 +14,266 @@
     <link rel="icon" href="../img/Vector.svg" />
   </head>
 
-  <body class="font-['Roboto'] bg-gray-50">
-    <div class="max-w-[1320px] w-[95%] mx-auto py-8">
-      <h1 class="text-2xl font-bold mb-6">Корзина</h1>
-
-      <!-- Cart List -->
-      <div id="cart-list"></div>
-
-      <!-- Footer -->
-      <div class="flex justify-between items-center mt-8">
-        <a
-          href="../index.html"
-          class="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+  <body class="font-['Roboto'] bg-gray-50 min-h-screen flex flex-col">
+    <!-- header start -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white border-b border-gray-100 shadow-sm z-50"
+    >
+      <div class="max-w-[1320px] w-[95%] mx-auto px-4">
+        <!-- TOP BAR -->
+        <div
+          class="hidden md:flex items-center justify-between py-2 text-xs text-gray-400"
         >
-          На главную
-        </a>
-        <div class="text-xl font-bold">
-          Итого: <span id="cart-total">0</span> сум
+          <div class="flex items-center gap-6">
+            <div
+              class="flex items-center gap-2 cursor-pointer hover:text-blue-500 transition"
+            >
+              <i class="fa-solid fa-location-dot text-gray-300"></i>
+              <span>Город</span>
+              <a href="../city.html" class="text-blue-500 hover:underline ml-1"
+                >Ташкент</a
+              >
+            </div>
+
+            <a
+              href="https://zon.uz"
+              class="flex items-center gap-1 hover:text-blue-500 transition"
+            >
+              <img src="../img/sell-icon.svg" alt="" class="w-4 h-4" />
+              Продавайте на Zon.uz
+            </a>
+
+            <a
+              href="https://www.b2bmarket.uz"
+              class="flex items-center gap-1 hover:text-blue-500 transition"
+            >
+              <img src="../img/buy-icon.svg" alt="" class="w-4 h-4" />
+              Покупать как юрлицо
+            </a>
+
+            <a
+              href="../help.html"
+              class="flex items-center gap-1 hover:text-blue-500 transition"
+            >
+              Помощь <i class="fa-solid fa-chevron-down text-[10px]"></i>
+            </a>
+
+            <a
+              href="../contacts.html"
+              class="flex items-center gap-1 hover:text-blue-500 transition"
+            >
+              <i class="fa-solid fa-phone"></i>
+              Контакты
+            </a>
+          </div>
+
+          <a
+            href="tel:+998785553500"
+            class="cursor-pointer hover:text-blue-500 transition"
+          >
+            <span class="text-black font-semibold flex items-center gap-1">
+              <i class="fa-solid fa-phone mr-1"></i>+998-78 555-35-00
+            </span>
+          </a>
+        </div>
+
+        <!-- MAIN HEADER -->
+        <div class="flex items-center justify-between py-3">
+          <!-- Logo -->
+          <a href="../index.html" class="flex items-center cursor-pointer">
+            <img src="../img/logo.svg" alt="Zon.uz" class="h-9 w-auto" />
+          </a>
+
+          <!-- Catalog -->
+          <button
+            class="hidden md:flex items-center justify-center gap-2 border border-[#011c47] rounded-md w-[140px] h-[42px] text-[#011c47] font-bold text-[16px] cursor-pointer hover:bg-gray-100 transition"
+          >
+            <img src="../img/catalog-icon.svg" alt="" class="w-5 h-5" />
+            Админ
+          </button>
+
+          <!-- Search -->
+          <form class="hidden md:flex items-center flex-1 mx-6 max-w-[640px]">
+            <input
+              type="text"
+              placeholder="Найти товары"
+              class="border border-[#6682a9] rounded-l-md w-full h-[40px] px-4 font-bold text-[15px] text-[#c2cddd] focus:outline-none"
+            />
+            <button
+              type="submit"
+              class="border border-[#6682a9] border-l-0 rounded-r-md w-[48px] h-[40px] flex items-center justify-center text-[#6682a9] cursor-pointer hover:text-blue-500"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+          <!-- Right icons -->
+          <div class="hidden md:flex items-center gap-5">
+            <a
+              href="cart.html"
+              class="cursor-pointer hover:text-blue-500"
+            >
+              <i class="fa-solid fa-cart-shopping text-xl text-gray-400"></i>
+            </a>
+
+            <a
+              href="../language.html"
+              class="flex items-center gap-2 hover:text-blue-500"
+            >
+              <img src="../img/globe.svg" alt="Globe" class="w-5 h-5" />
+              <span class="text-sm font-medium">RU</span>
+            </a>
+
+            <a href="../faq.html" class="cursor-pointer hover:text-blue-500">
+              <i class="fa-solid fa-circle-question text-xl text-gray-400"></i>
+            </a>
+
+            <a
+              href="../settings.html"
+              class="cursor-pointer hover:text-blue-500"
+            >
+              <i
+                class="fa-solid fa-grip-dots-vertical text-xl text-gray-400"
+              ></i>
+            </a>
+
+            <a href="../login.html" class="ml-2">
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md font-semibold cursor-pointer transition"
+              >
+                Войти
+              </button>
+            </a>
+          </div>
+
+          <!-- Hamburger -->
+          <button
+            id="menu-btn"
+            class="md:hidden text-gray-700 text-2xl focus:outline-none"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
       </div>
-    </div>
+    </header>
+    <!-- header end -->
+
+    <main class="flex-1 w-full">
+      <div class="max-w-[1320px] w-[95%] mx-auto py-8">
+        <h1 class="text-2xl font-bold mb-6">Корзина</h1>
+
+        <!-- Cart List -->
+        <div id="cart-list"></div>
+
+        <!-- Footer -->
+        <div class="flex justify-between items-center mt-8">
+          <a
+            href="../index.html"
+            class="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            На главную
+          </a>
+          <div class="text-xl font-bold">
+            Итого: <span id="cart-total">0</span> сум
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer start -->
+    <footer
+      class="max-w-[1320px] w-[95%] mx-auto mt-12 mb-4 grid grid-cols-1 md:grid-cols-4 gap-6 text-[15px] text-gray-700"
+    >
+      <!-- Контакты -->
+      <div class="bg-white rounded-lg p-5 border border-gray-100 shadow-sm">
+        <h3 class="font-bold mb-2">Контакты</h3>
+        <div class="mb-1">
+          <a href="tel:+998785553500" class="text-blue-500 hover:underline"
+            >Call-центр</a
+          ><br />
+          <span class="text-black">+998-78 555-35-00</span>
+        </div>
+        <div class="mb-1">
+          <span class="text-gray-600">Эл. почта</span><br />
+          <a href="mailto:info@zon.uz" class="text-blue-500 hover:underline"
+            >info@zon.uz</a
+          >
+        </div>
+        <div class="mt-2">
+          <span class="text-gray-600">График работы</span><br />
+          <div class="flex justify-between w-full">
+            <span>В будние</span>
+            <span class="text-black">с 09:00 до 18:00</span>
+          </div>
+          <div class="flex justify-between w-full">
+            <span>Суббота</span>
+            <span class="text-black">с 09:00 до 18:00</span>
+          </div>
+        </div>
+      </div>
+      <!-- Соц сети и платежи -->
+      <div
+        class="bg-white rounded-lg p-5 border border-gray-100 shadow-sm flex flex-col items-center justify-between"
+      >
+        <div class="mb-4 w-full">
+          <h3 class="font-bold mb-2 text-center">Мы в социальных сетях</h3>
+          <div class="flex justify-center gap-4">
+            <a href="#" class="text-blue-400 text-2xl"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+            <a href="#" class="text-red-500 text-2xl"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="#" class="text-pink-500 text-2xl"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="text-blue-600 text-2xl"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+        <div class="flex flex-col items-center mt-4">
+          <div class="flex gap-3 mb-1">
+            <img src="../img/payme.svg" alt="Payme" class="h-7" />
+            <img src="../img/click.svg" alt="Click" class="h-7" />
+          </div>
+          <span class="text-xs text-gray-500 text-center">
+            Интернет магазин Zon.uz 2017-2024.<br />Все права защищены
+          </span>
+        </div>
+      </div>
+      <!-- Компания -->
+      <div class="bg-white rounded-lg p-5 border border-gray-100 shadow-sm">
+        <h3 class="font-bold mb-2">Компания</h3>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:text-blue-500">О нас</a></li>
+          <li><a href="#" class="hover:text-blue-500">Реквизиты</a></li>
+          <li><a href="#" class="hover:text-blue-500">Контакты</a></li>
+          <li><a href="#" class="hover:text-blue-500">Вакансии</a></li>
+          <li><a href="#" class="hover:text-blue-500">Карта сайта</a></li>
+          <li><a href="#" class="hover:text-blue-500">Публичная оферта</a></li>
+          <li>
+            <a href="#" class="hover:text-blue-500">Продавайте на Zon.uz</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-blue-500">Покупать как юрлицо</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Помощь -->
+      <div class="bg-white rounded-lg p-5 border border-gray-100 shadow-sm">
+        <h3 class="font-bold mb-2">Помощь</h3>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:text-blue-500">Вопросы и ответы</a></li>
+          <li><a href="#" class="hover:text-blue-500">Условия рассрочки</a></li>
+          <li><a href="#" class="hover:text-blue-500">Способы оплаты</a></li>
+          <li><a href="#" class="hover:text-blue-500">Доставка</a></li>
+          <li><a href="#" class="hover:text-blue-500">Возврат товаров</a></li>
+          <li><a href="#" class="hover:text-blue-500">Сервисные центры</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- Footer end -->
 
     <script src="cart.js"></script>
   </body>

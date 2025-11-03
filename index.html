@@ -20,7 +20,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
-  <body class="font-['Roboto']">
+  <body class="font-['Roboto'] bg-gray-50 min-h-screen flex flex-col">
     <!-- header start -->
     <header
       class="fixed top-0 left-0 w-full bg-white border-b border-gray-100 shadow-sm z-50"
@@ -236,7 +236,7 @@
     <!-- header end -->
 
     <!-- Showcase start -->
-    <section class="mt-[120px]">
+    <section class="mt-[120px] flex-1">
       <div class="max-w-[1320px] w-[95%] mx-auto relative">
         <div
           class="relative overflow-hidden rounded-xl h-[350px] md:h-[420px] swiper"
@@ -327,36 +327,127 @@
             </p>
           </div>
         </div>
-
-        <script>
-          const swiper = new Swiper(".swiper", {
-            loop: true,
-            autoplay: {
-              delay: 5000,
-              disableOnInteraction: false,
-            },
-            navigation: {
-              nextEl: "#nextBtn",
-              prevEl: "#prevBtn",
-            },
-          });
-        </script>
       </div>
     </section>
     <!-- showcase end -->
 
-    <main class="container mx-auto px-4 py-8">
+    <section class="container mx-auto px-4 py-8 flex-1">
       <!-- Популярные -->
-      <section
-        id="popular"
-        class="max-w-[1320px] w-[95%] mx-auto py-8 px-4"
-      ></section>
+      <div id="popular" class="max-w-[1320px] w-[95%] mx-auto py-8 px-4"></div>
 
       <!-- Бестселлеры -->
-      <section id="bestsellers"></section>
-    </main>
+      <div id="bestsellers"></div>
+    </section>
+
+    <!-- Footer start -->
+    <footer
+      class="max-w-[1320px] w-[95%] mx-auto mt-12 mb-4 grid grid-cols-1 md:grid-cols-4 gap-6 text-[15px] text-gray-700"
+    >
+      <!-- Контакты -->
+      <div class="bg-white rounded-lg p-5 border border-gray-100 shadow-sm">
+        <h3 class="font-bold mb-2">Контакты</h3>
+        <div class="mb-1">
+          <a href="tel:+998785553500" class="text-blue-500 hover:underline"
+            >Call-центр</a
+          ><br />
+          <span class="text-black">+998-78 555-35-00</span>
+        </div>
+        <div class="mb-1">
+          <span class="text-gray-600">Эл. почта</span><br />
+          <a href="mailto:info@zon.uz" class="text-blue-500 hover:underline"
+            >info@zon.uz</a
+          >
+        </div>
+        <div class="mt-2">
+          <span class="text-gray-600">График работы</span><br />
+          <div class="flex justify-between w-full">
+            <span>В будние</span>
+            <span class="text-black">с 09:00 до 18:00</span>
+          </div>
+          <div class="flex justify-between w-full">
+            <span>Суббота</span>
+            <span class="text-black">с 09:00 до 18:00</span>
+          </div>
+        </div>
+      </div>
+      <!-- Соц сети и платежи -->
+      <div
+        class="bg-white rounded-lg p-5 border border-gray-100 shadow-sm flex flex-col items-center justify-between"
+      >
+        <div class="mb-4 w-full">
+          <h3 class="font-bold mb-2 text-center">Мы в социальных сетях</h3>
+          <div class="flex justify-center gap-4">
+            <a href="#" class="text-blue-400 text-2xl"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+            <a href="#" class="text-red-500 text-2xl"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="#" class="text-pink-500 text-2xl"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="text-blue-600 text-2xl"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+        <div class="flex flex-col items-center mt-4">
+          <div class="flex gap-3 mb-1">
+            <img src="./img/payme.svg" alt="Payme" class="h-7" />
+            <img src="./img/click.svg" alt="Click" class="h-7" />
+          </div>
+          <span class="text-xs text-gray-500 text-center">
+            Интернет магазин Zon.uz 2017-2024.<br />Все права защищены
+          </span>
+        </div>
+      </div>
+      <!-- Компания -->
+      <div class="bg-white rounded-lg p-5 border border-gray-100 shadow-sm">
+        <h3 class="font-bold mb-2">Компания</h3>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:text-blue-500">О нас</a></li>
+          <li><a href="#" class="hover:text-blue-500">Реквизиты</a></li>
+          <li><a href="#" class="hover:text-blue-500">Контакты</a></li>
+          <li><a href="#" class="hover:text-blue-500">Вакансии</a></li>
+          <li><a href="#" class="hover:text-blue-500">Карта сайта</a></li>
+          <li><a href="#" class="hover:text-blue-500">Публичная оферта</a></li>
+          <li>
+            <a href="#" class="hover:text-blue-500">Продавайте на Zon.uz</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-blue-500">Покупать как юрлицо</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Помощь -->
+      <div class="bg-white rounded-lg p-5 border border-gray-100 shadow-sm">
+        <h3 class="font-bold mb-2">Помощь</h3>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:text-blue-500">Вопросы и ответы</a></li>
+          <li><a href="#" class="hover:text-blue-500">Условия рассрочки</a></li>
+          <li><a href="#" class="hover:text-blue-500">Способы оплаты</a></li>
+          <li><a href="#" class="hover:text-blue-500">Доставка</a></li>
+          <li><a href="#" class="hover:text-blue-500">Возврат товаров</a></li>
+          <li><a href="#" class="hover:text-blue-500">Сервисные центры</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- Footer end -->
 
     <!-- JavaScript -->
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: "#nextBtn",
+          prevEl: "#prevBtn",
+        },
+      });
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
