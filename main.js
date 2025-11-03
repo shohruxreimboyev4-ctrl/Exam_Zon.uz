@@ -14,7 +14,6 @@ const fallbackProducts = [
   { id: 12, name: "Генератор Firman ECO 8990ES", price: "4 600 000 сум", image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRPGveDXmKwmPO4nzRjLFRs5ZA8LfJZnbPbpUcNHVaxo1aWry3YqH9gmg72eRm5tFtDoX6Tu8BhJU97upTbgiusyyIF9ZsjRsctXM5uPMNUs950-DJQlGRULbZf7EMykM3o&usqp=CAc" },
 ];
 
-// --- Section yaratish ---
 function createSection(title, count) {
   const section = document.createElement("section");
   section.className = "max-w-[1320px] w-[90%] mx-auto mb-16";
