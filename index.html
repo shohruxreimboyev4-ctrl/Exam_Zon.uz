@@ -95,7 +95,7 @@
             class="hidden md:flex items-center justify-center gap-2 border border-[#011c47] rounded-md w-[140px] h-[42px] text-[#011c47] font-bold text-[16px] cursor-pointer hover:bg-gray-100 transition"
           >
             <img src="./img/catalog-icon.svg" alt="" class="w-5 h-5" />
-            Каталог
+            Админ
           </button>
 
           <!-- Search -->
@@ -115,7 +115,10 @@
 
           <!-- Right icons -->
           <div class="hidden md:flex items-center gap-5">
-            <a href="./cart.html" class="cursor-pointer hover:text-blue-500">
+            <a
+              href="./basket/cart.html"
+              class="cursor-pointer hover:text-blue-500"
+            >
               <i class="fa-solid fa-cart-shopping text-xl text-gray-400"></i>
             </a>
 
@@ -188,7 +191,7 @@
           <a href="./contacts.html" class="hover:text-blue-500 font-medium"
             >Контакты</a
           >
-          <a href="./cart.html" class="hover:text-blue-500 font-medium"
+          <a href="./cart/cart.html" class="hover:text-blue-500 font-medium"
             >Корзина</a
           >
 
@@ -247,14 +250,14 @@
             </div>
             <div class="swiper-slide h-full">
               <img
-                src="./img/Hasan_aka.jpg"
-                class="w-screen h-screen object-cover object-center"
+                src="./img/slide2.png"
+                class="w-full h-full object-cover object-center"
               />
             </div>
             <div class="swiper-slide h-full">
               <img
-                src="./img/Davron_aka.jpg"
-                class="w-screen h-screen object-cover object-center"
+                src="./img/slide1.png"
+                class="w-full h-full object-cover object-center"
               />
             </div>
           </div>
@@ -303,22 +306,24 @@
           <div
             class="bg-[#e7f4ff] rounded-xl p-4 flex flex-col items-center justify-center hover:shadow-md transition cursor-pointer"
           >
-            <img src="./img/doczon-logo.73cc8cda.svg fill.svg" class="w-20 mb-3" />
+            <img
+              src="./img/doczon-logo.73cc8cda.svg fill.svg"
+              class="w-20 mb-3"
+            />
             <p class="text-center text-gray-700 text-sm font-medium">
-              Электронный <br> документооборот
+              Электронный <br />
+              документооборот
             </p>
           </div>
 
           <div
             class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-4 flex flex-col items-center justify-center text-white hover:shadow-lg transition cursor-pointer"
           >
-            <img
-              src="./img/foodee.svg"
-              alt="Foodee"
-              class="w-16 h-auto mb-2"
-            />
+            <img src="./img/foodee.svg" alt="Foodee" class="w-16 h-auto mb-2" />
             <p class="text-sm text-center">
-              Онлайн меню для <br /> ресторанов и <br> гостиниц
+              Онлайн меню для <br />
+              ресторанов и <br />
+              гостиниц
             </p>
           </div>
         </div>
@@ -339,5 +344,19 @@
       </div>
     </section>
     <!-- showcase end -->
+
+    <main class="container mx-auto px-4 py-8">
+      <!-- Популярные -->
+      <section
+        id="popular"
+        class="max-w-[1320px] w-[95%] mx-auto py-8 px-4"
+      ></section>
+
+      <!-- Бестселлеры -->
+      <section id="bestsellers"></section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
   </body>
 </html>

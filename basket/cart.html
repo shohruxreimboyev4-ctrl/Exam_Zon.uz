@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="icon" href="../img/Vector.svg" />
+  </head>
+
+  <body class="font-['Roboto'] bg-gray-50">
+    <div class="max-w-[1320px] w-[95%] mx-auto py-8">
+      <h1 class="text-2xl font-bold mb-6">Корзина</h1>
+
+      <!-- Cart List -->
+      <div id="cart-list"></div>
+
+      <!-- Footer -->
+      <div class="flex justify-between items-center mt-8">
+        <a
+          href="../index.html"
+          class="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          На главную
+        </a>
+        <div class="text-xl font-bold">
+          Итого: <span id="cart-total">0</span> сум
+        </div>
+      </div>
+    </div>
+
+    <script src="cart.js"></script>
+  </body>
+</html>
